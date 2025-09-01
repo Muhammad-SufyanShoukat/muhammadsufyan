@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ChevronDown, Github, Linkedin, Mail, Download } from 'lucide-react';
+import { ChevronDown, Github, Linkedin, Mail } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 const HeroSection = () => {
@@ -102,7 +102,7 @@ const HeroSection = () => {
             className="mb-6"
           >
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4">
-              <span className="block text-gray-900 dark:text-white">Hi, I'm a</span>
+              <span className="block text-gray-900 dark:text-white">Hi, I&apos;m a</span>
               <span className="block gradient-text">
                 MERN Stack Developer
               </span>

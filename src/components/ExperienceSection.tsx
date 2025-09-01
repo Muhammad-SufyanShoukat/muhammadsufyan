@@ -129,7 +129,7 @@ const ExperienceSection = () => {
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             My journey as a MERN stack developer, showcasing growth, achievements,
-            and the impact I've made in various organizations.
+and the impact I&apos;ve made in various organizations.
           </p>
         </motion.div>
 

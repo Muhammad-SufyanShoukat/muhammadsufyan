@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, Variants } from 'framer-motion';
-import { ExternalLink, Github, Calendar, Users, Star } from 'lucide-react';
+import { ExternalLink, Github, Calendar, Users } from 'lucide-react';
 import { useState } from 'react';
 
 const ProjectsSection = () => {

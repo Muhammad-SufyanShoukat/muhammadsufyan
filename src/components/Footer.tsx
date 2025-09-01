@@ -68,7 +68,7 @@ const Footer = () => {
                 </h3>
                 <p className="text-gray-300 mb-6 max-w-md">
                   Passionate full-stack developer crafting modern web applications with
-                  React.js, Express.js, Next.js, and TypeScript. Let's build something amazing together!
+  React.js, Express.js, Next.js, and TypeScript. Let&apos;s build something amazing together!
                 </p>
                 <div className="flex gap-4">
                   {socialLinks.map((social) => (

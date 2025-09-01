@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, Variants } from 'framer-motion';
-import { Code, Database, Server, Globe, Smartphone, Zap } from 'lucide-react';
+import { Code, Database, Server, Globe } from 'lucide-react';
 
 const SkillsSection = () => {
   const skillCategories = [

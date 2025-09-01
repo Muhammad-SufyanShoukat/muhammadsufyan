@@ -96,7 +96,7 @@ const ContactSection = () => {
             </span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Ready to bring your ideas to life? Let's discuss your next project and how
+  Ready to bring your ideas to life? Let&apos;s discuss your next project and how
             I can help you achieve your goals with modern web technologies.
           </p>
         </motion.div>
@@ -112,10 +112,11 @@ const ContactSection = () => {
           >
             <div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                Let's Start a Conversation
+  Let&apos;s Start a Conversation
+
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-8">
-                I'm always excited to work on new projects and collaborate with amazing people.
+                I&apos;m always excited to work on new projects and collaborate with amazing people.
                 Whether you have a question, want to discuss a project, or just want to say hi,
                 feel free to reach out!
               </p>
@@ -295,7 +296,7 @@ const ContactSection = () => {
                   animate={{ opacity: 1, y: 0 }}
                   className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg text-green-700 dark:text-green-400 text-center"
                 >
-                  Thank you for your message! I'll get back to you within 24 hours.
+                  Thank you for your message!  I&apos;ll get back to you within 24 hours.
                 </motion.div>
               )}
             </form>
