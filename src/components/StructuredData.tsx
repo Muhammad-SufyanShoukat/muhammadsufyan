@@ -15,7 +15,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type }) => {
         return {
           ...baseData,
           '@type': 'Person',
-          name: 'Your Name',
+          name: 'Muhammad Sufyan',
           jobTitle: 'MERN Stack Developer',
           description: 'Experienced MERN Stack Developer with 2 years of expertise in React.js, Express.js, Next.js, TypeScript, MongoDB, PostgreSQL, and MySQL.',
           url: 'https://yourportfolio.com',
@@ -56,7 +56,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type }) => {
           url: 'https://yourportfolio.com',
           author: {
             '@type': 'Person',
-            name: 'Your Name'
+            name: 'Muhammad Sufyan'
           },
           potentialAction: {
             '@type': 'SearchAction',
@@ -69,7 +69,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type }) => {
         return {
           ...baseData,
           '@type': 'Organization',
-          name: 'Your Name - MERN Stack Developer',
+          name: 'Muhammad Sufyan - MERN Stack Developer',
           description: 'Professional MERN stack development services',
           url: 'https://yourportfolio.com',
           logo: 'https://yourportfolio.com/logo.png',
@@ -106,8 +106,8 @@ export default StructuredData;
 export const generateMetadata = (): Metadata => {
   return {
     title: {
-      default: 'MERN Stack Developer | Your Name - Portfolio',
-      template: '%s | Your Name - MERN Developer'
+      default: 'MERN Stack Developer | Muhammad Sufyan - Portfolio',
+      template: '%s | Muhammad Sufyan - MERN Developer'
     },
     description: 'Experienced MERN Stack Developer with 2 years of expertise in React.js, Express.js, Next.js, TypeScript, MongoDB, PostgreSQL, and MySQL. View my portfolio and projects.',
     keywords: [
@@ -128,9 +128,9 @@ export const generateMetadata = (): Metadata => {
       'Portfolio',
       'Projects'
     ],
-    authors: [{ name: 'Your Name', url: 'https://yourportfolio.com' }],
-    creator: 'Your Name',
-    publisher: 'Your Name',
+    authors: [{ name: 'Muhammad Sufyan', url: 'https://yourportfolio.com' }],
+    creator: 'Muhammad Sufyan',
+    publisher: 'Muhammad Sufyan',
     formatDetection: {
       email: false,
       address: false,
@@ -144,9 +144,9 @@ export const generateMetadata = (): Metadata => {
       type: 'website',
       locale: 'en_US',
       url: 'https://yourportfolio.com',
-      title: 'MERN Stack Developer | Your Name - Portfolio',
+      title: 'MERN Stack Developer | Muhammad Sufyan - Portfolio',
       description: 'Experienced MERN Stack Developer with 2 years of expertise in React.js, Express.js, Next.js, TypeScript, MongoDB, PostgreSQL, and MySQL.',
-      siteName: 'Your Name - MERN Developer Portfolio',
+      siteName: 'Muhammad Sufyan - MERN Developer Portfolio',
       images: [
         {
           url: '/og-image.jpg',
@@ -158,7 +158,7 @@ export const generateMetadata = (): Metadata => {
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'MERN Stack Developer | Your Name - Portfolio',
+      title: 'MERN Stack Developer | Muhammad Sufyan - Portfolio',
       description: 'Experienced MERN Stack Developer with 2 years of expertise in React.js, Express.js, Next.js, TypeScript, MongoDB, PostgreSQL, and MySQL.',
       images: ['/og-image.jpg'],
       creator: '@yourusername',

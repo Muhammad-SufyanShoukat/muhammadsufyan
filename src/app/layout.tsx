@@ -21,8 +21,8 @@ export const viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "MERN Stack Developer | Your Name - Portfolio",
-    template: "%s | Your Name - MERN Developer"
+    default: "MERN Stack Developer | Muhammad Sufyan - Portfolio",
+    template: "%s | Muhammad Sufyan - MERN Developer"
   },
   description: "Experienced MERN Stack Developer with 2 years of expertise in React.js, Express.js, Next.js, TypeScript, MongoDB, PostgreSQL, and MySQL. View my portfolio and projects.",
   keywords: [
@@ -43,9 +43,9 @@ export const metadata: Metadata = {
     "Portfolio",
     "Projects"
   ],
-  authors: [{ name: "Your Name", url: "https://yourportfolio.com" }],
-  creator: "Your Name",
-  publisher: "Your Name",
+  authors: [{ name: "Muhammad Sufyan", url: "https://yourportfolio.com" }],
+  creator: "Muhammad Sufyan",
+  publisher: "Muhammad Sufyan",
   formatDetection: {
     email: false,
     address: false,
@@ -71,9 +71,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://yourportfolio.com",
-    title: "MERN Stack Developer | Your Name - Portfolio",
+    title: "MERN Stack Developer | Muhammad Sufyan - Portfolio",
     description: "Experienced MERN Stack Developer with 2 years of expertise in React.js, Express.js, Next.js, TypeScript, MongoDB, PostgreSQL, and MySQL.",
-    siteName: "Your Name - MERN Developer Portfolio",
+    siteName: "Muhammad Sufyan - MERN Developer Portfolio",
     images: [
       {
         url: "/og-image.jpg",
@@ -85,7 +85,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "MERN Stack Developer | Your Name - Portfolio",
+    title: "MERN Stack Developer | Muhammad Sufyan - Portfolio",
     description: "Experienced MERN Stack Developer with 2 years of expertise in React.js, Express.js, Next.js, TypeScript, MongoDB, PostgreSQL, and MySQL.",
     images: ["/og-image.jpg"],
     creator: "@yourusername",
