@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin } from 'lucide-react';
 import { useState } from 'react';
 
 const ContactSection = () => {
@@ -62,20 +62,14 @@ const ContactSection = () => {
     {
       icon: Github,
       name: 'GitHub',
-      href: 'https://github.com',
+      href: 'https://github.com/Muhammad-SufyanShoukat',
       color: 'hover:text-gray-900 dark:hover:text-white',
     },
     {
       icon: Linkedin,
       name: 'LinkedIn',
-      href: 'https://linkedin.com',
+      href: 'https://www.linkedin.com/in/muhammad-sufyan12/',
       color: 'hover:text-blue-600',
-    },
-    {
-      icon: Twitter,
-      name: 'Twitter',
-      href: 'https://twitter.com',
-      color: 'hover:text-blue-400',
     },
   ];
 

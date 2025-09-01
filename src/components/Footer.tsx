@@ -172,7 +172,7 @@ const Footer = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="flex items-center gap-4"
             >
-              <span className="text-gray-400 text-sm">Built with modern technologies</span>
+              {/* <span className="text-gray-400 text-sm">Built with modern technologies</span> */}
               <motion.button
                 onClick={scrollToTop}
                 whileHover={{ scale: 1.1, y: -2 }}
