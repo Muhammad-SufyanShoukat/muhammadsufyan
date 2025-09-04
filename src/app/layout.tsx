@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navigation from '@/components/Navigation';
 import StructuredData from '@/components/StructuredData';
+import BackgroundEffects from '@/components/BackgroundEffects';
 
 const geist = Geist({
   variable: "--font-geist-sans",
@@ -110,10 +111,13 @@ export default function RootLayout({
         <StructuredData type="Organization" />
       </head>
       <body
-        className={`${geist.variable} ${geistMono.variable} antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300`}
+        className={`${geist.variable} ${geistMono.variable} antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300 relative`}
       >
+        <BackgroundEffects />
         <Navigation />
-        {children}
+        <div className="relative z-10">
+          {children}
+        </div>
       </body>
     </html>
   );

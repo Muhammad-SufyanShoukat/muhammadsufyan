@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Menu, X, Home, User, Code, Briefcase, Mail } from 'lucide-react';
+import { Menu, X, Home, User, Code, Briefcase, Mail, ChevronDown, Github, Linkedin } from 'lucide-react';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -85,20 +85,68 @@ const Navigation = () => {
             height: isOpen ? 'auto' : 0,
             opacity: isOpen ? 1 : 0,
           }}
-          className="md:hidden overflow-hidden"
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+          className="md:hidden overflow-hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-md rounded-lg mt-2 shadow-xl border border-gray-200 dark:border-gray-700"
         >
-          <div className="py-4 space-y-4">
-            {navItems.map((item) => (
+          <div className="py-6 px-4 space-y-2">
+            {navItems.map((item, index) => (
               <motion.button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                whileHover={{ x: 10 }}
-                className="flex items-center space-x-3 w-full text-left px-4 py-2 text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors duration-200"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ 
+                  opacity: isOpen ? 1 : 0, 
+                  x: isOpen ? 0 : -20 
+                }}
+                transition={{ 
+                  delay: isOpen ? index * 0.1 : 0,
+                  duration: 0.3 
+                }}
+                whileHover={{ 
+                  x: 8, 
+                  backgroundColor: "rgba(59, 130, 246, 0.1)",
+                  scale: 1.02
+                }}
+                whileTap={{ scale: 0.98 }}
+                className="flex items-center space-x-4 w-full text-left px-6 py-4 rounded-xl text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-all duration-200 group relative overflow-hidden"
               >
-                <item.icon size={20} />
-                <span>{item.name}</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                <item.icon size={22} className="relative z-10" />
+                <span className="relative z-10 font-medium">{item.name}</span>
+                <motion.div 
+                  className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                  whileHover={{ x: 2 }}
+                >
+                  <ChevronDown size={16} className="rotate-[-90deg]" />
+                </motion.div>
               </motion.button>
             ))}
+            
+            {/* Mobile Social Links */}
+            <div className="pt-4 mt-4 border-t border-gray-200 dark:border-gray-700">
+              <div className="flex justify-center space-x-6">
+                <motion.a
+                  href="https://github.com/Muhammad-SufyanShoukat"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="p-3 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors duration-200"
+                >
+                  <Github size={20} className="text-gray-600 dark:text-gray-400" />
+                </motion.a>
+                <motion.a
+                  href="https://www.linkedin.com/in/muhammad-sufyan12/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="p-3 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors duration-200"
+                >
+                  <Linkedin size={20} className="text-gray-600 dark:text-gray-400" />
+                </motion.a>
+              </div>
+            </div>
           </div>
         </motion.div>
       </div>
