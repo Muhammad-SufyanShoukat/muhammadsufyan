@@ -74,7 +74,7 @@ const BackgroundEffects = () => {
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
       {/* Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-transparent to-purple-50/30 dark:from-blue-900/10 dark:via-transparent dark:to-purple-900/10" />
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-transparent to-purple-900/10" />
       
       {/* Mouse Follow Effect */}
       <div 
@@ -88,7 +88,7 @@ const BackgroundEffects = () => {
       {stars.map((star) => (
         <motion.div
           key={star.id}
-          className="absolute rounded-full bg-blue-400 dark:bg-blue-300"
+          className="absolute rounded-full bg-blue-300"
           style={{
             left: `${star.x}%`,
             top: `${star.y}%`,
@@ -112,7 +112,7 @@ const BackgroundEffects = () => {
       {bubbles.map((bubble) => (
         <motion.div
           key={bubble.id}
-          className="absolute rounded-full border border-blue-200/20 dark:border-blue-400/10"
+          className="absolute rounded-full border border-blue-400/10"
           style={{
             left: `${bubble.x}%`,
             top: `${bubble.y}%`,

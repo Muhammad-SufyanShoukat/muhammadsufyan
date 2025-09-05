@@ -112,7 +112,7 @@ const ExperienceSection = () => {
   };
 
   return (
-    <section id="experience" className="py-20 bg-gray-50 dark:bg-gray-800/50">
+    <section id="experience" className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-purple-900 relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -127,7 +127,7 @@ const ExperienceSection = () => {
               Professional Experience
             </span>
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
             My journey as a MERN stack developer, showcasing growth, achievements,
 and the impact I&apos;ve made in various organizations.
           </p>
@@ -153,18 +153,18 @@ and the impact I&apos;ve made in various organizations.
                   className="relative mb-12 last:mb-0"
                 >
                   {/* Timeline Dot */}
-                  <div className="absolute left-6 w-4 h-4 bg-white dark:bg-gray-900 border-4 border-blue-500 rounded-full z-10" />
+                  <div className="absolute left-6 w-4 h-4 bg-gray-900 border-4 border-blue-500 rounded-full z-10" />
 
                   {/* Experience Card */}
                   <div className="ml-20">
                     <motion.div
                       whileHover={{ scale: 1.02, y: -5 }}
-                      className="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700"
+                      className="bg-gray-900 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700"
                     >
                       {/* Header */}
                       <div className="flex flex-wrap items-start justify-between mb-4">
                         <div>
-                          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
+                          <h3 className="text-xl font-bold text-white mb-1">
                             {exp.title}
                           </h3>
                           <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold mb-2">
@@ -178,7 +178,7 @@ and the impact I&apos;ve made in various organizations.
                       </div>
 
                       {/* Meta Information */}
-                      <div className="flex flex-wrap gap-4 mb-4 text-sm text-gray-600 dark:text-gray-400">
+                      <div className="flex flex-wrap gap-4 mb-4 text-sm text-gray-400">
                         <div className="flex items-center gap-1">
                           <Calendar size={14} />
                           <span>{exp.period} ({exp.duration})</span>
@@ -190,13 +190,13 @@ and the impact I&apos;ve made in various organizations.
                       </div>
 
                       {/* Description */}
-                      <p className="text-gray-700 dark:text-gray-300 mb-4">
+                      <p className="text-gray-300 mb-4">
                         {exp.description}
                       </p>
 
                       {/* Achievements */}
                       <div className="mb-4">
-                        <h4 className="font-semibold text-gray-900 dark:text-white mb-2 flex items-center gap-2">
+                        <h4 className="font-semibold text-white mb-2 flex items-center gap-2">
                           <Award size={16} className="text-yellow-500" />
                           Key Achievements
                         </h4>
@@ -208,7 +208,7 @@ and the impact I&apos;ve made in various organizations.
                               whileInView={{ opacity: 1, x: 0 }}
                               viewport={{ once: true }}
                               transition={{ duration: 0.4, delay: i * 0.1 }}
-                              className="text-sm text-gray-600 dark:text-gray-400 flex items-start gap-2"
+                              className="text-sm text-gray-400 flex items-start gap-2"
                             >
                               <span className="text-green-500 mt-1">•</span>
                               <span>{achievement}</span>
@@ -219,7 +219,7 @@ and the impact I&apos;ve made in various organizations.
 
                       {/* Technologies */}
                       <div>
-                        <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Technologies Used</h4>
+                        <h4 className="font-semibold text-white mb-2">Technologies Used</h4>
                         <div className="flex flex-wrap gap-2">
                           {exp.technologies.map((tech) => (
                             <span
@@ -246,9 +246,9 @@ and the impact I&apos;ve made in various organizations.
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-lg border border-gray-200 dark:border-gray-700"
+              className="bg-gray-900 rounded-2xl p-6 shadow-lg border border-gray-700"
             >
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
+              <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
                 <TrendingUp className="text-blue-500" size={20} />
                 Professional Skills
               </h3>
@@ -256,7 +256,7 @@ and the impact I&apos;ve made in various organizations.
                 {skills.map((skill, index) => (
                   <div key={skill.name}>
                     <div className="flex justify-between items-center mb-2">
-                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                      <span className="text-sm font-medium text-gray-300">
                         {skill.name}
                       </span>
                       <span className="text-sm text-gray-500 dark:text-gray-400">

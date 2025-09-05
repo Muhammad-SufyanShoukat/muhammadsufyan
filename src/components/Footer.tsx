@@ -15,7 +15,7 @@ const Footer = () => {
       icon: Github,
       href: 'https://github.com',
       label: 'GitHub',
-      color: 'hover:text-gray-900 dark:hover:text-white',
+      color: 'hover:text-white',
     },
     {
       icon: Linkedin,

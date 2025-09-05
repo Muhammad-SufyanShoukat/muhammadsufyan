@@ -131,7 +131,7 @@ const projects = [
   };
 
   return (
-    <section id="projects" className="py-20 bg-white dark:bg-gray-900">
+    <section id="projects" className="py-20 bg-gray-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -146,7 +146,7 @@ const projects = [
               Featured Projects
             </span>
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto mb-8">
             Showcase of my recent work demonstrating expertise in MERN stack development,
             from concept to deployment.
           </p>
@@ -162,7 +162,7 @@ const projects = [
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                   activeFilter === category
                     ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
-                    : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                 }`}
               >
                 {category}
@@ -184,10 +184,10 @@ const projects = [
               key={project.id}
               variants={itemVariants}
               whileHover={{ y: -10 }}
-              className="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700"
+              className="group bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-700"
             >
               {/* Project Image */}
-              <div className="relative overflow-hidden h-48 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-gray-700 dark:to-gray-600">
+              <div className="relative overflow-hidden h-48 bg-gradient-to-br from-gray-700 to-gray-600">
                 <div className="absolute inset-0 flex items-center justify-center text-6xl">
                   💻
                 </div>
@@ -196,7 +196,7 @@ const projects = [
                   <motion.a
                     href={project.liveUrl}
                     whileHover={{ scale: 1.1 }}
-                    className="p-2 bg-white/90 rounded-full text-gray-700 hover:text-blue-600 transition-colors"
+                    className="p-2 bg-gray-800/90 rounded-full text-gray-300 hover:text-blue-400 transition-colors"
                     aria-label="View live project"
                   >
                     <ExternalLink size={16} />
@@ -204,7 +204,7 @@ const projects = [
                   <motion.a
                     href={project.githubUrl}
                     whileHover={{ scale: 1.1 }}
-                    className="p-2 bg-white/90 rounded-full text-gray-700 hover:text-gray-900 transition-colors"
+                    className="p-2 bg-gray-800/90 rounded-full text-gray-300 hover:text-white transition-colors"
                     aria-label="View source code"
                   >
                     <Github size={16} />
@@ -216,20 +216,20 @@ const projects = [
               <div className="p-6">
                 {/* Project Header */}
                 <div className="flex items-start justify-between mb-3">
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                  <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
                     {project.title}
                   </h3>
                   <span className={`px-2 py-1 text-xs font-medium rounded-full ${
                     project.status === 'Completed'
-                      ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300'
-                      : 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300'
+                      ? 'bg-green-900 text-green-300'
+                      : 'bg-yellow-900 text-yellow-300'
                   }`}>
                     {project.status}
                   </span>
                 </div>
 
                 {/* Project Description */}
-                <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 line-clamp-3">
+                <p className="text-gray-300 text-sm mb-4 line-clamp-3">
                   {project.description}
                 </p>
 
@@ -238,20 +238,20 @@ const projects = [
                   {project.technologies.slice(0, 3).map((tech) => (
                     <span
                       key={tech}
-                      className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-300 text-xs font-medium rounded-md"
+                      className="px-2 py-1 bg-blue-900 text-blue-300 text-xs font-medium rounded-md"
                     >
                       {tech}
                     </span>
                   ))}
                   {project.technologies.length > 3 && (
-                    <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 text-xs font-medium rounded-md">
+                    <span className="px-2 py-1 bg-gray-700 text-gray-400 text-xs font-medium rounded-md">
                       +{project.technologies.length - 3}
                     </span>
                   )}
                 </div>
 
                 {/* Project Meta */}
-                <div className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
+                <div className="flex items-center justify-between text-xs text-gray-400">
                   <div className="flex items-center gap-1">
                     <Calendar size={12} />
                     <span>{project.date}</span>

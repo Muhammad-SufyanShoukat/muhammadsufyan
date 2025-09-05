@@ -104,14 +104,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth dark">
       <head>
         <StructuredData type="Person" />
         <StructuredData type="WebSite" />
         <StructuredData type="Organization" />
       </head>
       <body
-        className={`${geist.variable} ${geistMono.variable} antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300 relative`}
+        className={`${geist.variable} ${geistMono.variable} antialiased bg-gray-900 text-white relative`}
       >
         <BackgroundEffects />
         <Navigation />

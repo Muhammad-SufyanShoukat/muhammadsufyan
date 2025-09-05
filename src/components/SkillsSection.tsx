@@ -78,7 +78,7 @@ const SkillsSection = () => {
   };
 
   return (
-    <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-800/50">
+    <section id="skills" className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-purple-900 relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -93,7 +93,7 @@ const SkillsSection = () => {
               Technical Skills
             </span>
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
             Proficient in modern web technologies with 2 years of hands-on experience
             building scalable and performant applications.
           </p>
@@ -111,14 +111,14 @@ const SkillsSection = () => {
             <motion.div
               key={category.title}
               variants={itemVariants}
-              className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700"
+              className="bg-gray-900 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700"
             >
               {/* Category Header */}
               <div className="flex items-center mb-6">
                 <div className={`p-3 rounded-xl bg-gradient-to-r ${category.color} text-white mr-4`}>
                   <category.icon size={24} />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                <h3 className="text-xl font-bold text-white">
                   {category.title}
                 </h3>
               </div>
@@ -128,7 +128,7 @@ const SkillsSection = () => {
                 {category.skills.map((skill, skillIndex) => (
                   <div key={skill.name} className="group">
                     <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-700 dark:text-gray-300 font-medium">
+                      <span className="text-gray-300 font-medium">
                         {skill.name}
                       </span>
                       <span className="text-sm text-gray-500 dark:text-gray-400">

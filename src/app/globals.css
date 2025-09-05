@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
 
 @theme inline {
@@ -10,24 +10,6 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-/* Force consistent dark mode */
-.dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-}
-
-.light {
-  --background: #ffffff;
-  --foreground: #171717;
 }
 
 body {
@@ -111,10 +93,8 @@ html {
 }
 
 /* Dark mode scrollbar */
-@media (prefers-color-scheme: dark) {
-  ::-webkit-scrollbar-track {
-    background: #2d2d2d;
-  }
+::-webkit-scrollbar-track {
+  background: #2d2d2d;
 }
 
 /* Smooth animations */
