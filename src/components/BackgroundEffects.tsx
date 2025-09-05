@@ -46,14 +46,14 @@ const BackgroundEffects = () => {
     // Generate bubbles
     const generateBubbles = () => {
       const newBubbles: Bubble[] = [];
-      for (let i = 0; i < 15; i++) {
+      for (let i = 0; i < 20; i++) {
         newBubbles.push({
           id: i,
           x: Math.random() * 100,
           y: Math.random() * 100,
-          size: Math.random() * 60 + 20,
-          duration: Math.random() * 10 + 15,
-          delay: Math.random() * 5,
+          size: Math.random() * 80 + 30,
+          duration: Math.random() * 15 + 20,
+          delay: Math.random() * 8,
         });
       }
       setBubbles(newBubbles);
@@ -112,23 +112,27 @@ const BackgroundEffects = () => {
       {bubbles.map((bubble) => (
         <motion.div
           key={bubble.id}
-          className="absolute rounded-full border border-blue-400/10"
+          className="absolute rounded-full"
           style={{
             left: `${bubble.x}%`,
             top: `${bubble.y}%`,
             width: `${bubble.size}px`,
             height: `${bubble.size}px`,
+            background: 'radial-gradient(circle at 30% 30%, rgba(59, 130, 246, 0.15), rgba(147, 51, 234, 0.08), transparent 70%)',
+            border: '1px solid rgba(59, 130, 246, 0.1)',
+            backdropFilter: 'blur(1px)',
           }}
           animate={{
-            y: [0, -30, 0],
-            x: [0, 15, -15, 0],
-            scale: [1, 1.1, 0.9, 1],
-            opacity: [0.1, 0.3, 0.1],
+            y: [0, -50, -20, 0],
+            x: [0, 25, -20, 15, 0],
+            scale: [1, 1.15, 0.95, 1.05, 1],
+            opacity: [0.05, 0.25, 0.15, 0.3, 0.05],
+            rotate: [0, 5, -3, 2, 0],
           }}
           transition={{
             duration: bubble.duration,
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: [0.25, 0.46, 0.45, 0.94],
             delay: bubble.delay,
           }}
         />
@@ -136,55 +140,75 @@ const BackgroundEffects = () => {
 
       {/* Animated Gradient Orbs */}
       <motion.div
-        className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-400/10 to-purple-400/10 rounded-full blur-3xl"
+        className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-3xl"
+        style={{
+          background: 'radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, rgba(147, 51, 234, 0.08) 50%, transparent 100%)',
+        }}
         animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.3, 0.5, 0.3],
+          scale: [1, 1.3, 0.9, 1.1, 1],
+          opacity: [0.2, 0.4, 0.25, 0.35, 0.2],
+          x: [0, 20, -15, 10, 0],
+          y: [0, -10, 15, -5, 0],
         }}
         transition={{
-          duration: 8,
+          duration: 12,
           repeat: Infinity,
-          ease: "easeInOut",
+          ease: [0.25, 0.46, 0.45, 0.94],
         }}
       />
       
       <motion.div
-        className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-400/10 to-pink-400/10 rounded-full blur-3xl"
+        className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full blur-3xl"
+        style={{
+          background: 'radial-gradient(circle, rgba(147, 51, 234, 0.12) 0%, rgba(236, 72, 153, 0.08) 50%, transparent 100%)',
+        }}
         animate={{
-          scale: [1.2, 1, 1.2],
-          opacity: [0.2, 0.4, 0.2],
+          scale: [1.1, 0.8, 1.2, 0.95, 1.1],
+          opacity: [0.15, 0.35, 0.2, 0.3, 0.15],
+          x: [0, -25, 15, -10, 0],
+          y: [0, 20, -15, 5, 0],
         }}
         transition={{
-          duration: 10,
+          duration: 15,
           repeat: Infinity,
-          ease: "easeInOut",
+          ease: [0.25, 0.46, 0.45, 0.94],
         }}
       />
 
       {/* Geometric Shapes */}
       <motion.div
-        className="absolute top-1/3 right-1/5 w-4 h-4 bg-blue-400/20 rotate-45"
+        className="absolute top-1/3 right-1/5 w-4 h-4 rotate-45"
+        style={{
+          background: 'linear-gradient(45deg, rgba(59, 130, 246, 0.2), rgba(147, 51, 234, 0.15))',
+          borderRadius: '2px',
+        }}
         animate={{
-          rotate: [45, 225, 45],
-          scale: [1, 1.5, 1],
+          rotate: [45, 135, 225, 315, 45],
+          scale: [1, 1.4, 0.8, 1.2, 1],
+          opacity: [0.3, 0.6, 0.2, 0.5, 0.3],
         }}
         transition={{
-          duration: 6,
+          duration: 8,
           repeat: Infinity,
-          ease: "linear",
+          ease: [0.25, 0.46, 0.45, 0.94],
         }}
       />
       
       <motion.div
-        className="absolute bottom-1/3 left-1/5 w-6 h-6 border-2 border-purple-400/20 rounded-full"
+        className="absolute bottom-1/3 left-1/5 w-6 h-6 rounded-full"
+        style={{
+          border: '2px solid rgba(147, 51, 234, 0.2)',
+          background: 'radial-gradient(circle, rgba(147, 51, 234, 0.1), transparent 70%)',
+        }}
         animate={{
-          scale: [1, 1.3, 1],
-          opacity: [0.2, 0.5, 0.2],
+          scale: [1, 1.5, 0.7, 1.2, 1],
+          opacity: [0.2, 0.6, 0.3, 0.5, 0.2],
+          rotate: [0, 180, 360],
         }}
         transition={{
-          duration: 4,
+          duration: 6,
           repeat: Infinity,
-          ease: "easeInOut",
+          ease: [0.25, 0.46, 0.45, 0.94],
         }}
       />
     </div>

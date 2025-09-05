@@ -80,6 +80,8 @@ const HeroSection = () => {
                   <Image
                     src="/sufyan.jpg"
                     alt="Sufyan"
+                    width={160}
+                    height={160}
                     className="w-full h-full object-cover rounded-full"
                   />
                 </div>
